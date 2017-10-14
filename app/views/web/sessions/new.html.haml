@@ -11,3 +11,13 @@
                 = f.input :email
                 = f.input :password
                 = f.submit t('.submit'), class: "btn btn-secondary"
+          %br
+          %h3
+            = t('.sign_in_via_socials')
+          %ul.navbar-nav.d-inline-flex
+            %li.nav-item
+              = link_to sign_in_via_social_network_cpath(:vkontakte), class: 'nav-link' do
+                %span.fa.fa-vk
+            %li.nav-item
+              = link_to sign_in_via_social_network_cpath(:facebook), class: 'nav-link' do
+                %span.fa.fa-facebook

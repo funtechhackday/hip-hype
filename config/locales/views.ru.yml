@@ -10,6 +10,7 @@ ru:
     sessions:
       new:
         sign_in: Авторизация
+        sign_in_via_socials: Войти с помощью социальных сетей
         submit: Войти
     users:
       new:
