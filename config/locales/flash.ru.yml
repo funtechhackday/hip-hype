@@ -10,3 +10,5 @@ ru:
       sessions:
         create:
           success: "Вход выполнен успешно"
+        destroy:
+          success: "Вы вышли"
