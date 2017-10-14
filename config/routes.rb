@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resource :session, only: [:new, :create, :destroy]
     resource :account, only: [:show, :edit, :update]
     resources :users, only: [:new, :create]
+    resources :hype_tracks, only: [:index, :show]
   end
 
   namespace :admin do
