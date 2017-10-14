@@ -13,8 +13,8 @@ ru:
         user_sign_in_type:
           attributes:
             email:
-              blank: "Поле email не должно быть пустым"
-              email: "Введен некорректный email"
+              blank: Поле email не должно быть пустым
+              email: Введен некорректный email
             password:
-              blank: "Поле пароля не должно быть пустым"
-              user_or_password_invalid: "Email и/или пароль неверны"
+              blank: Поле пароля не должно быть пустым
+              user_or_password_invalid: Email и/или пароль неверны

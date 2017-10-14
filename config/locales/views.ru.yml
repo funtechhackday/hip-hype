@@ -9,8 +9,13 @@ ru:
   web:
     sessions:
       new:
-        sign_in: "Авторизация"
-        submit: "Войти"
+        sign_in: Авторизация
+        submit: Войти
+    users:
+      new:
+        registration: Регистрация
+        sign_in: Войти
+        submit: Зарегистрироваться
 
   helpers:
     submit:

@@ -6,7 +6,6 @@ class Web::UsersController < Web::ApplicationController
 
   def create
     @user = UserRegistrationType.new(params[:user])
-    @user.generate_confirmation_token
     if @user.save
       f(:success)
       redirect_to root_path

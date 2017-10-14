@@ -9,6 +9,9 @@ ru:
     web:
       sessions:
         create:
-          success: "Вход выполнен успешно"
+          success: Вход выполнен успешно
         destroy:
-          success: "Вы вышли"
+          success: Вы вышли
+      users:
+        create:
+          success: Вы успешно зарегистрировались
