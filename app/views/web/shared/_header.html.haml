@@ -3,7 +3,6 @@
     = t('hip-hype')
   #navbarNav
     %ul.navbar-nav
-      -# = nav_link(t('users'), admin_users_path, 'nav-link', 'nav-item')
       - if signed_in?
         -# %li
         -#   = link_to session_path, method: :delete do
@@ -23,7 +22,7 @@
         %li
           = link_to new_session_path do
             %i.fa.fa-sign-out
-            %span= t('.sign_in')
+            %span= t('sign_in')
         -# %li
     -#       = link_to new_user_path do
     -#         %i.fa.fa-user-plus

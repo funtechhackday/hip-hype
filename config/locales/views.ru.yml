@@ -6,6 +6,12 @@ ru:
       edit:
         edit: Редактировать пользователя
 
+  web:
+    sessions:
+      new:
+        sign_in: "Авторизация"
+        submit: "Войти"
+
   helpers:
     submit:
       user:
