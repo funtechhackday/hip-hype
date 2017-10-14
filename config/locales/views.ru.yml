@@ -1,0 +1,12 @@
+ru:
+  admin:
+    users:
+      index:
+        title: Пользователи
+      edit:
+        edit: Редактировать пользователя
+
+  helpers:
+    submit:
+      user:
+        update: Обновить инвестора

@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'validates'
 gem 'haml-rails'
-gem 'bootstrap', '~> 4.0.0.beta'
+gem 'bootstrap', '4.0.0.alpha6'
 gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'simple_form'
