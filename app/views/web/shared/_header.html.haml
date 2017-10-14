@@ -5,34 +5,23 @@
   .ml-auto
     %ul.navbar-nav
       - if signed_in?
-        -# %li
-        -#   = link_to session_path, method: :delete do
-        -#     %i.fa.fa-sign-out
-        -#     %span= t('.sign_out')
-        -# %li
-        -#   = link_to account_path do
-        -#     %i.fa.fa-user
-        -#     %span= t('.profile')
-        -# %li
-        -#   = link_to cart_path do
-        -#     %i.fa.fa-shopping-cart
-        -#     %span= t('.cart')
-        -#     - unless current_order.items.count.zero?
-        -#       %span.red-cart-count= t('.cart_count', count: current_order.items.count)
+        %li.nav-item
+          = link_to session_path, class: 'nav-link', method: :delete do
+            %i.fa.fa-sign-out
+            %span= t('.sign_out')
+        %li.nav-item
+          = link_to account_path, class: 'nav-link' do
+            %i.fa.fa-user
+            %span= t('.profile')
       - else
         %li.nav-item
           = link_to new_session_path, class: 'nav-link' do
             %i.fa.fa-sign-out
             %span= t('sign_in')
-        -# %li
-    -#       = link_to new_user_path do
-    -#         %i.fa.fa-user-plus
-    -#         %span= t('.sign_up')
-    -#   %li
-    -#     %a{:href => "#{categories_path}"}
-    -#       %i.fa.fa-list
-    -#       %span= t('.products')
-    -#
+        %li.nav-item
+          = link_to new_user_path, class: 'nav-link' do
+            %i.fa.fa-user-plus
+            %span= t('.sign_up')
     -# %h1.logo
     -#   = link_to(root_path) do
     -#     #logo{class: ("black" if black)}
