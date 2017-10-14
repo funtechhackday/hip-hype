@@ -1,16 +1,16 @@
 class Web::SessionsController < Web::ApplicationController
 
   def new
-    @session = UserSignInType.new
+    @user_type = UserSignInType.new
   end
 
   def create
-    @session = UserSignInType.new(params[:user_sign_in_type])
+    @user_type = UserSignInType.new(params[:user_sign_in_type])
 
-    if @session.valid?
-      user = @session.user
-      sign_in(user)
+    if @user_type.valid?
+      user = @user_type.user
       f(:success)
+      sign_in(user)
       redirect_user user, params[:from]
     else
       render :new
@@ -20,7 +20,7 @@ class Web::SessionsController < Web::ApplicationController
   def destroy
     sign_out
     f(:success)
-    try_redirect_to_from_or root_path
+    redirect_to root_path
   end
-  
+
 end

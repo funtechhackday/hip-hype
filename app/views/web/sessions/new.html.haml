@@ -1,0 +1,7 @@
+.sign-in_form
+  %h1
+    = t('.sign_in')
+  = simple_form_for @user_type, url: session_path(from: params[:from]) do |f|
+    = f.input :email
+    = f.input :password
+    = f.submit t('.submit'), class: "btn btn-primary"
