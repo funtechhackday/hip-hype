@@ -6,7 +6,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
 
   %body
+    = render 'web/shared/header'
     .container-fluid.container-max-width
-      = render 'web/shared/header', black: true
       = bootstrap_flash_messages
       = yield

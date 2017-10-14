@@ -1,8 +1,11 @@
-%header#header{class: ("light" unless black)}
-  %nav.main
-    %ul.nav-left
-    -#   - if signed_in?
-    -#     %li
+%nav.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse
+  .navbar-brand
+    = t('hip-hype')
+  #navbarNav
+    %ul.navbar-nav
+      -# = nav_link(t('users'), admin_users_path, 'nav-link', 'nav-item')
+      - if signed_in?
+        %li
     -#       = link_to session_path, method: :delete do
     -#         %i.fa.fa-sign-out
     -#         %span= t('.sign_out')
