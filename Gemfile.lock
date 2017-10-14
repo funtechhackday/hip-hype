@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/fazibear/colorize.git
+  revision: 7c0b50a278da01870be4435ec1b5753c2544e8f3
+  specs:
+    colorize (0.8.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -221,6 +227,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  colorize!
   font-awesome-rails
   haml-rails
   jbuilder (~> 2.5)

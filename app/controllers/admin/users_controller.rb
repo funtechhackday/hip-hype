@@ -13,7 +13,7 @@ class Admin::UsersController < Admin::ApplicationController
 
     if @user.update user_params
       f(:success)
-      redirect_to admin_users_path(@user)
+      redirect_to admin_users_path
     else
       f(:error)
       render :edit
