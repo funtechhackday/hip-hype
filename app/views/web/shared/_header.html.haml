@@ -1,7 +1,8 @@
 %nav.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse
   .navbar-brand
     = t('hip-hype')
-  #navbarNav
+    -# #navbarNav
+  .ml-auto
     %ul.navbar-nav
       - if signed_in?
         -# %li
@@ -19,8 +20,8 @@
         -#     - unless current_order.items.count.zero?
         -#       %span.red-cart-count= t('.cart_count', count: current_order.items.count)
       - else
-        %li
-          = link_to new_session_path do
+        %li.nav-item
+          = link_to new_session_path, class: 'nav-link' do
             %i.fa.fa-sign-out
             %span= t('sign_in')
         -# %li
