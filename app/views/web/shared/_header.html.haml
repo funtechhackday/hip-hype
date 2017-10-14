@@ -1,7 +1,7 @@
 %nav.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse
   .navbar-brand
-    = t('hip-hype')
-    -# #navbarNav
+    = link_to root_path, class: 'navbar-brand' do
+      = t('hip-hype')
   .ml-auto
     %ul.navbar-nav
       - if signed_in?
@@ -22,15 +22,3 @@
           = link_to new_user_path, class: 'nav-link' do
             %i.fa.fa-user-plus
             %span= t('sign_up')
-    -# %h1.logo
-    -#   = link_to(root_path) do
-    -#     #logo{class: ("black" if black)}
-    -# %ul.nav-right
-    -#   %li.seprt
-    -#     %a{:href => "tel://+7-902-008-00-10"}
-    -#       %i.fa.fa-phone
-    -#       %span +7-902-008-00-10
-    -#   %li.last
-    -#     %a{:href => "mailto:myhandsel@gmail.com?Subject=Order", target: "_top"}
-    -#       %i.fa.fa-envelope
-    -#       %span myhandsel@gmail.com
