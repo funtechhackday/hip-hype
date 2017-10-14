@@ -1,0 +1,12 @@
+!!! 5
+%html
+  %head
+    = csrf_meta_tags
+    = stylesheet_link_tag "application", media: "all", 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+
+  %body
+    .container-fluid.container-max-width
+      = render 'web/shared/header', black: true
+      = bootstrap_flash_messages
+      = yield

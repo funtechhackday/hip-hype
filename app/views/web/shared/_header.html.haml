@@ -1,0 +1,44 @@
+%header#header{class: ("light" unless black)}
+  %nav.main
+    %ul.nav-left
+    -#   - if signed_in?
+    -#     %li
+    -#       = link_to session_path, method: :delete do
+    -#         %i.fa.fa-sign-out
+    -#         %span= t('.sign_out')
+    -#     %li
+    -#       = link_to account_path do
+    -#         %i.fa.fa-user
+    -#         %span= t('.profile')
+    -#     %li
+    -#       = link_to cart_path do
+    -#         %i.fa.fa-shopping-cart
+    -#         %span= t('.cart')
+    -#         - unless current_order.items.count.zero?
+    -#           %span.red-cart-count= t('.cart_count', count: current_order.items.count)
+    -#   - else
+    -#     %li
+    -#       = link_to new_session_path do
+    -#         %i.fa.fa-sign-out
+    -#         %span= t('.sign_in')
+    -#     %li
+    -#       = link_to new_user_path do
+    -#         %i.fa.fa-user-plus
+    -#         %span= t('.sign_up')
+    -#   %li
+    -#     %a{:href => "#{categories_path}"}
+    -#       %i.fa.fa-list
+    -#       %span= t('.products')
+    -#
+    -# %h1.logo
+    -#   = link_to(root_path) do
+    -#     #logo{class: ("black" if black)}
+    -# %ul.nav-right
+    -#   %li.seprt
+    -#     %a{:href => "tel://+7-902-008-00-10"}
+    -#       %i.fa.fa-phone
+    -#       %span +7-902-008-00-10
+    -#   %li.last
+    -#     %a{:href => "mailto:myhandsel@gmail.com?Subject=Order", target: "_top"}
+    -#       %i.fa.fa-envelope
+    -#       %span myhandsel@gmail.com
