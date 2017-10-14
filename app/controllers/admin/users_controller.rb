@@ -1,4 +1,4 @@
-class Admin::CitiesController < Admin::ApplicationController
+class Admin::UsersController < Admin::ApplicationController
 
   def index
     @users = User.all.order(:id)
