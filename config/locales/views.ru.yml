@@ -16,6 +16,12 @@ ru:
         registration: Регистрация
         sign_in: Войти
         submit: Зарегистрироваться
+    accounts:
+      edit:
+        change_info: Изменить информацию
+        submit: Подтвердить изменения
+      show:
+        account: Аккаунт
 
   helpers:
     submit:

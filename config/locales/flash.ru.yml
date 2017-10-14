@@ -15,3 +15,6 @@ ru:
       users:
         create:
           success: Вы успешно зарегистрировались
+      accounts:
+        update:
+          success: Вы успешно отредактировали информацию

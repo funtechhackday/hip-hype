@@ -1,0 +1,18 @@
+.account_form
+  .row.justify-content-md-center
+    .col-md-6
+      .card
+        .card-block
+          .sign-in_form
+            %h1
+              = t('.change_info')
+            = simple_form_for @user, url: account_path, method: :put do |f|
+              .row
+                .col-md-6
+                  = f.input :last_name
+                  = f.input :first_name
+                  %label.string.optional.control-label
+                    -# = t('.avatar')
+                  -# = f.attachment_field :avatar
+                  = f.input :email, input_html: {disabled: :disabled}
+                  = f.submit t('.submit'), class: "btn btn-secondary"
