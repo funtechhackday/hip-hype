@@ -1,0 +1,6 @@
+= simple_form_for @user, url: url, html: {method: method } do |f|
+  = f.input :first_name
+  = f.input :last_name
+
+  .form-actions
+    = f.button :submit, class: 'btn btn-primary'

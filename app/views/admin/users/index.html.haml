@@ -1,0 +1,18 @@
+.row
+  .col-md-12
+    .form-actions
+
+    %table.table.table-striped
+      %thead
+        %tr
+          %th= User.human_attribute_name(:id)
+          %th= User.human_attribute_name(:name)
+          %th= t('edit')
+      %tbody
+        - @users.each do |user|
+          %tr
+            %td= user.id
+            %td= user.name
+            %td
+              = link_to edit_admin_user_path(user) do
+                %i.fa.fa-pencil
