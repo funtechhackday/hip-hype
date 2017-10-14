@@ -2,3 +2,19 @@ ru:
   edit: Редактировать
   users: Пользователи
   hip-hype: HIP-HYPE
+  sign_in: Войти
+  sign_out: Выйти
+  sign_up: Зарегистрироваться
+  profile: Профиль
+
+  activemodel:
+    errors:
+      models:
+        user_sign_in_type:
+          attributes:
+            email:
+              blank: Поле email не должно быть пустым
+              email: Введен некорректный email
+            password:
+              blank: Поле пароля не должно быть пустым
+              user_or_password_invalid: Email и/или пароль неверны

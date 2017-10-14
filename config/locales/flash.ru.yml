@@ -5,3 +5,16 @@ ru:
         update:
           success: Пользователь обновлен
           error: При обновлении данных пользователя произошла ошибка
+
+    web:
+      sessions:
+        create:
+          success: Вход выполнен успешно
+        destroy:
+          success: Вы вышли
+      users:
+        create:
+          success: Вы успешно зарегистрировались
+      accounts:
+        update:
+          success: Вы успешно отредактировали информацию

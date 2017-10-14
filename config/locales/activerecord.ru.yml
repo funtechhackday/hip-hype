@@ -6,3 +6,7 @@ ru:
         first_name: Имя
         last_name: Фамилия
         email: Почтовый адрес
+
+  attributes:
+    email: Почтовый адрес
+    password: Пароль

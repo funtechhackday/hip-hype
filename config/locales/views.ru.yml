@@ -6,6 +6,23 @@ ru:
       edit:
         edit: Редактировать пользователя
 
+  web:
+    sessions:
+      new:
+        sign_in: Авторизация
+        submit: Войти
+    users:
+      new:
+        registration: Регистрация
+        sign_in: Войти
+        submit: Зарегистрироваться
+    accounts:
+      edit:
+        change_info: Изменить информацию
+        submit: Подтвердить изменения
+      show:
+        account: Аккаунт
+
   helpers:
     submit:
       user:
