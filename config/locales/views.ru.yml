@@ -9,4 +9,4 @@ ru:
   helpers:
     submit:
       user:
-        update: Обновить инвестора
+        update: Обновить пользователя
