@@ -30,6 +30,11 @@ gem "font-awesome-rails"
 gem 'simple_form'
 gem "colorize", github: "fazibear/colorize"
 gem 'virtus'
+gem 'omniauth'
+gem 'omniauth-vkontakte'
+gem 'omniauth-facebook'
+gem 'configus'
+gem 'responders'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
