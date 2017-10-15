@@ -22,15 +22,72 @@ export default class Track extends React.Component {
     this.setState({ name });
   };
 
+  sendData() {
+    const token = document.querySelector('meta[name="csrf-token"]').content
+    formData = new FormData(this.form)
+		  formData.append('record', question.answerRecord)
+
+			contentType = 'application/x-www-form-urlencoded'
+			processData = true
+		}
+
+		$.ajax(`/hype_tracks/${this.props.track_id}/add_record`,
+			{
+				method: 'POST',
+				data: formData,
+				processData,
+				contentType,
+				beforeSend: (xhr) => {
+					xhr.setRequestHeader('X-CSRF-Token', token)
+				},
+			}
+		)
+		.done(res => {
+			this.toggleLoader(question.id, false)
+			if (res.closest_correct_answer) {
+				this.selectAnswer(res.closest_correct_answer)
+
+				this.addToDialog({
+					is_user: true,
+					id: `answer-${id}`,
+					audio: res.record_url,
+					text: res.record_text,
+				})
+
+				this.successRecognize()
+			}
+			else {
+				this.failRecognize()
+			}
+		})
+		.fail(res => {
+			this.toggleLoader(question.id, false)
+			this.failRecognize()
+		})
+
+  }
+
   render() {
     return (
       <div className='track-detail card'>
+        <form
+          ref={(form) => { this.form = form; }} >
+        {this.props.strings.map((el,key) => {
+          return <div key={key}>{el}</div>
+        })}
         <AudioRecord
             user={this.props.user_id}
             question={{
               id: this.props.track_id}}  />
+            <div className='form-group'>
+              <label>Напишите строчку для следующего участника</label>
 
-
+              <input className='form-control' name='string'></input>
+            </div>
+            <div className='form-group'>
+              <button onckick={this.sendData} type='submit' className='btn btn-primary'>Отправить</button>
+            </div>
+        </form>
       </div>
     );
   }
