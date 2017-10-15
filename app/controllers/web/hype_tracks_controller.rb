@@ -23,4 +23,10 @@ class Web::HypeTracksController <  Web::ApplicationController
     end
 
   end
+
+  def listen
+    @track = HypeTrack.find(1)
+    @user = User.find(6)
+    @user2 = User.find(7)
+  end
 end
