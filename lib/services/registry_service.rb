@@ -31,10 +31,10 @@ module Services
     end
 
     def fetch_avatar(user)
-      # if !user.avatar && @info.image.present?
-      #   user.remote_avatar_url = @info.image.split('?').first
-      #   user.save
-      # end
+      if !user.avatar && @info.image.present?
+        user.remote_avatar_url = @info.image.split('?').first
+        user.save
+      end
     end
   end
 end

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'users#index'
     resources :users, only: [:index, :edit, :update]
+    resources :audio_tracks, only: [:index, :new, :create, :edit, :update, :destroy]
     resources :hype_tracks
   end
   match '/auth/:provider/callback' => 'api/social_networks#auth_callback', via: [:get, :post]

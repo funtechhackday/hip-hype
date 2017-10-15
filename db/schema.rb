@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171015090235) do
+ActiveRecord::Schema.define(version: 20171015103700) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "audio_tracks", force: :cascade do |t|
+    t.string "audio_file_id", null: false
+    t.string "audio_file_filename", null: false
+    t.string "audio_file_size", null: false
+    t.string "audio_file_content_type", null: false
+    t.integer "delay"
+  end
 
   create_table "hype_tracks", force: :cascade do |t|
     t.string "name"

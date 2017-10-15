@@ -5,9 +5,16 @@ ru:
         title: Пользователи
       edit:
         edit: Редактировать пользователя
+      form:
+        avatar: Загрузить аватар
     hype_tracks:
       index:
         title: Треки
+      edit:
+        edit: Редактировать трек
+    audio_tracks:
+      new:
+        new: Новый трек
       edit:
         edit: Редактировать трек
 
@@ -21,10 +28,12 @@ ru:
       new:
         registration: Регистрация
         sign_in: Войти
+        sign_in_via_socials: Войти с помощью социальных сетей
         submit: Зарегистрироваться
     accounts:
       edit:
         change_info: Изменить информацию
+        avatar: Загрузить новый аватар
         submit: Подтвердить изменения
       show:
         account: Аккаунт
@@ -33,3 +42,6 @@ ru:
     submit:
       user:
         update: Обновить пользователя
+      audio_track:
+        create: Создать трек
+        update: Обновить трек

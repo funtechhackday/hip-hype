@@ -10,6 +10,10 @@ ru:
         id: ID
         name: Название
         theme: Тема
+      audio_track:
+        id: ID
+        name: Название
+        delay: Задержка
 
   attributes:
     email: Почтовый адрес
