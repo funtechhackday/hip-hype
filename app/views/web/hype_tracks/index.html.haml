@@ -1,2 +1,11 @@
-%h1 Web::HypeTracks#index
-%p Find me in app/views/web/hype_tracks/index.html.haml
+.container-fluid
+  .row
+    -@tracks.each do |track|
+      .col-xs-12
+        .card
+          .card-block
+            #h3.card-title
+              =track.name
+            #p.card-text
+              =track.theme
+            =link_to 'зачитать', track, class: 'btn btn-primary'

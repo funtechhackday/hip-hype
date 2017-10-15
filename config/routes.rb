@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'hello_world', to: 'hello_world#index'
   scope module: :web do
-    root to: 'welcome#index'
+    root to: 'hype_tracks#index'
     resource :session, only: [:new, :create, :destroy]
     resource :account, only: [:show, :edit, :update]
     resources :users, only: [:new, :create]
