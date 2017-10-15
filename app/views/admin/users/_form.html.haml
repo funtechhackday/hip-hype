@@ -3,6 +3,7 @@
     .col-md-6
       = f.input :first_name
       = f.input :last_name
+      = f.attachment_field :avatar
 
   .form-actions
     = f.button :submit, class: 'btn btn-primary'
