@@ -5,6 +5,11 @@ ru:
         title: Пользователи
       edit:
         edit: Редактировать пользователя
+    hype_tracks:
+      index:
+        title: Треки
+      edit:
+        edit: Редактировать трек
 
   web:
     sessions:

@@ -6,6 +6,10 @@ ru:
         first_name: Имя
         last_name: Фамилия
         email: Почтовый адрес
+      hype_track:
+        id: ID
+        name: Название
+        theme: Тема
 
   attributes:
     email: Почтовый адрес

@@ -10,11 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171015010002) do
+=======
+ActiveRecord::Schema.define(version: 20171014151534) do
+>>>>>>> feature/records
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "user_authorizations", force: :cascade do |t|
     t.string "uid"
     t.bigint "user_id"
@@ -22,6 +27,19 @@ ActiveRecord::Schema.define(version: 20171015010002) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_user_authorizations_on_user_id"
+=======
+  create_table "hype_tracks", force: :cascade do |t|
+    t.string "name"
+    t.text "theme"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "records", force: :cascade do |t|
+    t.string "file_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+>>>>>>> feature/records
   end
 
   create_table "users", force: :cascade do |t|
