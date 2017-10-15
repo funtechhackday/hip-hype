@@ -1,0 +1,11 @@
+= simple_form_for @audio_track, url: url, html: {method: method } do |f|
+  .row
+    .col-md-6
+      = f.input :delay
+      %label.string.optional.control-label
+        = t('.audio_file')
+      = f.attachment_field :audio_file
+      %br
+      %br
+  .form-actions
+    = f.button :submit, class: 'btn btn-secondary'

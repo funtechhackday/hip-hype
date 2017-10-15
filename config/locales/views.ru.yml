@@ -12,6 +12,11 @@ ru:
         title: Треки
       edit:
         edit: Редактировать трек
+    audio_tracks:
+      new:
+        new: Новый трек
+      edit:
+        edit: Редактировать трек
 
   web:
     sessions:
@@ -37,3 +42,6 @@ ru:
     submit:
       user:
         update: Обновить пользователя
+      audio_track:
+        create: Создать трек
+        update: Обновить трек
