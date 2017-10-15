@@ -30,7 +30,8 @@ gem "font-awesome-rails"
 gem 'simple_form'
 gem "colorize", github: "fazibear/colorize"
 gem 'virtus'
-gem 'react-rails'
+gem 'react_on_rails'
+gem 'webpacker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
