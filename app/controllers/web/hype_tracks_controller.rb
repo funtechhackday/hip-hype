@@ -17,5 +17,10 @@ class Web::HypeTracksController <  Web::ApplicationController
       track_string: params[:string],
       record: Record.create(file: params[:record]),
     )
+
+    if @track.user_records > 8 && !@track.mixed do
+      @track.mix_track
+    end
+
   end
 end

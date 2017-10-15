@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171015113741) do
+ActiveRecord::Schema.define(version: 20171015142355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,11 @@ ActiveRecord::Schema.define(version: 20171015113741) do
     t.text "theme"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "record_id"
+    t.bigint "audio_track_id"
+    t.boolean "mixed", default: false
+    t.index ["audio_track_id"], name: "index_hype_tracks_on_audio_track_id"
+    t.index ["record_id"], name: "index_hype_tracks_on_record_id"
   end
 
   create_table "records", force: :cascade do |t|
@@ -68,6 +73,8 @@ ActiveRecord::Schema.define(version: 20171015113741) do
     t.integer "avatar_size"
   end
 
+  add_foreign_key "hype_tracks", "audio_tracks"
+  add_foreign_key "hype_tracks", "records"
   add_foreign_key "user_authorizations", "users"
   add_foreign_key "user_records", "hype_tracks"
   add_foreign_key "user_records", "records"
