@@ -3,6 +3,8 @@
     .col-md-6
       = f.input :first_name
       = f.input :last_name
+      %label.string.optional.control-label
+        = t('.avatar')
       = f.attachment_field :avatar
 
   .form-actions
