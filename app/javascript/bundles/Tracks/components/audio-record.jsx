@@ -102,14 +102,14 @@ class AudioRecord extends Component {
 	// }
 
 	updateQuestion(question) {
-		// if (this.props.handlers && this.props.handlers.updateQuestion) {
-		// 	this.props.handlers.updateQuestion(question)
-		// }
-		// else {
-		this.setState({
-			question,
-		})
-		// }
+		if (this.props.handlers && this.props.handlers.updateQuestion) {
+			this.props.handlers.updateQuestion(question)
+		}
+		else {
+			this.setState({
+				question,
+			})
+		}
 	}
 
 	renderTime = (seconds) => {

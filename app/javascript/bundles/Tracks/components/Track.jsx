@@ -25,11 +25,11 @@ export default class Track extends React.Component {
   sendData() {
     const token = document.querySelector('meta[name="csrf-token"]').content
     formData = new FormData(this.form)
-		  formData.append('record', question.answerRecord)
+	  formData.append('record', question.answerRecord)
 
-			contentType = 'application/x-www-form-urlencoded'
-			processData = true
-		}
+		contentType = 'application/x-www-form-urlencoded'
+		processData = true
+	
 
 		$.ajax(`/hype_tracks/${this.props.track_id}/add_record`,
 			{
@@ -67,6 +67,10 @@ export default class Track extends React.Component {
 
   }
 
+  updateQuestion(question) {
+    this.setState({question})
+  }
+
   render() {
     return (
       <div className='track-detail card'>
@@ -77,6 +81,9 @@ export default class Track extends React.Component {
         })}
         <AudioRecord
             user={this.props.user_id}
+            handlers={{
+              updateQuestion: this.updateQuestion.bind(this)
+            }}
             question={{
               id: this.props.track_id}}  />
             <div className='form-group'>
