@@ -27,7 +27,7 @@ class Web::HypeTracksController <  Web::ApplicationController
   end
 
   def listen
-    @track = HypeTrack.find(1)
+    @track = HypeTrack.find(params[:hype_track_id])
     # @user = User.find(6)
     # @user2 = User.find(7)
   end
