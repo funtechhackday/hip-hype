@@ -124,19 +124,22 @@ class AudioRecord extends Component {
 		return <time>{m}:{s}</time>
 	}
 
-	togglePlay = () => {
+	togglePlay = (e) => {
+		e.preventDefault()
 		window.console.log('toggle play')
 		const question = this.state.question
 		question.recorder.togglePlay()
 	};
 
-	pause = () => {
+	pause = (e) => {
+		e.preventDefault()
 		window.console.log('pause')
 		const question = this.state.question
 		question.recorder.pause()
 	};
 
-	stopPlaying = () => {
+	stopPlaying = (e) => {
+		e.preventDefault()
 		window.console.log('stop playing')
 		const question = this.state.question
 		question.recorder.stopPlaying()
@@ -193,7 +196,7 @@ class AudioRecord extends Component {
 
 		this.toggleLoader(false)
 		this.updateQuestion(question)
-		this.props.handlers.changed()
+		// this.props.handlers.changed()
 	};
 
 	processHandler = (context, r) => {
@@ -222,7 +225,8 @@ class AudioRecord extends Component {
 		this.updateQuestion(question)
 	};
 
-	resetRecord = () => {
+	resetRecord = (e) => {
+		e.preventDefault()
 		const question = this.state.question
 
 		question.currentTime = 0
@@ -239,7 +243,7 @@ class AudioRecord extends Component {
 		this.updateQuestion(question)
 	};
 
-	toggleRecord = () => {
+	toggleRecord = (e) => {
 		const question = this.state.question
 
 		if (question.status !== 'recording') {

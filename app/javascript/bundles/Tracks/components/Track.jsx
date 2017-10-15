@@ -22,21 +22,28 @@ export default class Track extends React.Component {
     this.setState({ name });
   };
 
-  sendData() {
+  sendData(e) {
+    e.preventDefault()
     const token = document.querySelector('meta[name="csrf-token"]').content
-    formData = new FormData(this.form)
-	  formData.append('record', question.answerRecord)
+    let formData = new FormData()
+    formData.append('record', this.state.question.answerRecord)
+    formData.append('string', this.state.string)
+    // {
+    //   record: this.state.question.answerRecord,
+    //   string: this.state.string,
+    // }
 
-		contentType = 'application/x-www-form-urlencoded'
-		processData = true
-	
+
+
+		// const contentType = 'application/x-www-form-urlencoded'
+		// const processData = true
 
 		$.ajax(`/hype_tracks/${this.props.track_id}/add_record`,
 			{
 				method: 'POST',
 				data: formData,
-				processData,
-				contentType,
+				processData: false,
+				contentType: false,
 				beforeSend: (xhr) => {
 					xhr.setRequestHeader('X-CSRF-Token', token)
 				},
@@ -71,11 +78,19 @@ export default class Track extends React.Component {
     this.setState({question})
   }
 
+  updateString(e) {
+    const string = this.stringInput && this.stringInput.value
+    if (string) {
+      this.setState({string})
+    }
+
+  }
+
+
   render() {
     return (
       <div className='track-detail card'>
-        <form
-          ref={(form) => { this.form = form; }} >
+
         {this.props.strings.map((el,key) => {
           return <div key={key}>{el}</div>
         })}
@@ -86,14 +101,19 @@ export default class Track extends React.Component {
             }}
             question={{
               id: this.props.track_id}}  />
-            <div className='form-group'>
-              <label>Напишите строчку для следующего участника</label>
+        <form
+          ref={ (form) => this.form = form } >
+          <div className='form-group'>
+            <label>Напишите строчку для следующего участника</label>
 
-              <input className='form-control' name='string'></input>
-            </div>
-            <div className='form-group'>
-              <button onckick={this.sendData} type='submit' className='btn btn-primary'>Отправить</button>
-            </div>
+            <input
+              ref={ (input) => this.stringInput = input }
+              onChange={this.updateString.bind(this)}
+              className='form-control' name='string' />
+          </div>
+          <div className='form-group'>
+            <button onClick={this.sendData.bind(this)} type='submit' className='btn btn-primary'>Отправить</button>
+          </div>
         </form>
       </div>
     );
