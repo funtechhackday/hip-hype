@@ -32,6 +32,7 @@ gem "colorize", github: "fazibear/colorize"
 gem 'virtus'
 gem 'react_on_rails'
 gem 'webpacker'
+gem 'foreman'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -51,3 +52,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'mini_racer', platforms: :ruby

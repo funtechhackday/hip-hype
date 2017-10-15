@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'hello_world', to: 'hello_world#index'
   scope module: :web do
     root to: 'welcome#index'
     resource :session, only: [:new, :create, :destroy]
