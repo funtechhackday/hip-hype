@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     resources :users, only: [:new, :create]
     resources :hype_tracks, only: [:index, :show] do
       post :add_record, to: 'hype_tracks#add_record'
+      member do
+        get :listen
+      end
     end
   end
 
