@@ -14,7 +14,6 @@ module Services
 
       user = User.find_by(email: @info.email)
       user = create_user_with_temp_password unless user
-      user.confirm unless user.active?
 
       user.authorizations.create(provider: @hash.provider, uid: @hash.uid)
 
@@ -28,14 +27,14 @@ module Services
       pass = SecureHelper.generate_token
       first_name, last_name, middle_name = *@info.name.split(' ', 3)
       User.create(email: @info.email, password: pass, password_digest: pass,
-                  first_name: first_name, last_name: last_name, middle_name: middle_name)
+                  first_name: first_name, last_name: last_name)
     end
 
     def fetch_avatar(user)
-      if !user.avatar && @info.image.present?
-        user.remote_avatar_url = @info.image.split('?').first
-        user.save
-      end
+      # if !user.avatar && @info.image.present?
+      #   user.remote_avatar_url = @info.image.split('?').first
+      #   user.save
+      # end
     end
   end
 end
