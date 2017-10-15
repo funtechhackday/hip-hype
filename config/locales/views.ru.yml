@@ -45,3 +45,6 @@ ru:
       audio_track:
         create: Создать трек
         update: Обновить трек
+      hype_track:
+        create: Создать ХАЙП трек
+        update: Обновить ХАЙП трек

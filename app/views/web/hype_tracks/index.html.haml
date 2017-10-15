@@ -1,5 +1,7 @@
 .container-fluid
   .row
+    %h1= 'Принять участие в записи'
+  .row
     -@tracks.each do |track|
       .col-xs-12
         .card
@@ -8,4 +10,17 @@
               =track.name
             #p.card-text
               =track.theme
-            =link_to 'зачитать', track, class: 'btn btn-primary'
+            =link_to 'зачитать', track, class: 'btn btn-secondary'
+
+  .row
+    %h1= 'Прослушать записанные треки'
+  .row
+    -@tracks.each do |track|
+      .col-xs-12
+        .card
+          .card-block
+            #h3.card-title
+              =track.name
+            #p.card-text
+              =track.theme
+            =link_to 'слушать', track, class: 'btn btn-secondary'

@@ -26,8 +26,10 @@ class Admin::HypeTracksController < Admin::ApplicationController
   def create
     @admin_hype_track = HypeTrack.new(admin_hype_track_params)
     if @admin_hype_track.save
-      redirect_to [:admin, @admin_hype_track], notice: 'Hype track was successfully created.'
+      f(:success)
+      redirect_to [:admin, @admin_hype_track]
     else
+      f(:success)
       render :new
     end
   end
@@ -36,8 +38,10 @@ class Admin::HypeTracksController < Admin::ApplicationController
   # PATCH/PUT /admin/hype_tracks/1.json
   def update
     if @admin_hype_track.update(admin_hype_track_params)
-      redirect_to [:admin,@admin_hype_track], notice: 'Hype track was successfully updated.'
+      f(:success)
+      redirect_to [:admin,@admin_hype_track]
     else
+      f(:success)
       render :edit
     end
   end
@@ -46,7 +50,8 @@ class Admin::HypeTracksController < Admin::ApplicationController
   # DELETE /admin/hype_tracks/1.json
   def destroy
     @admin_hype_track.destroy
-    redirect_to [:admin, admin_hype_tracks_url], notice: 'Hype track was successfully destroyed.'
+    f(:success)
+    redirect_to [:admin, admin_hype_tracks_url]
   end
 
   private
