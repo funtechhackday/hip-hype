@@ -14,14 +14,13 @@
                   = f.input :last_name
                   = f.input :password
                   = f.submit t('.submit'), class: "btn btn-secondary"
-
-    
-  -# %h3
-  -#   = t('.sign_in_via_socials')
-  -# %ul.socials
-  -#   %li.social
-  -#     = link_to sign_in_via_social_network_cpath(:vkontakte) do
-  -#       %span.fa.fa-vk
-  -#   %li.social
-  -#     = link_to sign_in_via_social_network_cpath(:facebook) do
-  -#       %span.fa.fa-facebook
+            %br
+            %h3
+              = t('.sign_in_via_socials')
+            %ul.list-inline
+              %li.list-inline-item
+                = link_to sign_in_via_social_network_cpath(:vkontakte), class: 'nav-link hype-icon-black' do
+                  %span.fa.fa-vk.fa-2x
+              %li.list-inline-item
+                = link_to sign_in_via_social_network_cpath(:facebook), class: 'nav-link hype-icon-black' do
+                  %span.fa.fa-facebook.fa-2x
