@@ -23,6 +23,7 @@ ru:
       new:
         registration: Регистрация
         sign_in: Войти
+        sign_in_via_socials: Войти с помощью социальных сетей
         submit: Зарегистрироваться
     accounts:
       edit:
