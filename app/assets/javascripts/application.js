@@ -12,6 +12,7 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require RecorderJS/recordmp3.js
 //= require jquery3
 //= require bootstrap-sprockets
 //= require_tree .

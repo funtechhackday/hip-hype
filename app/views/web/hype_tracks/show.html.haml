@@ -1,2 +1,6 @@
-%h1 Web::HypeTracks#show
-%p Find me in app/views/web/hype_tracks/show.html.haml
+-# =render_
+= react_component("Track", props: { track_id: @track.id,
+  available: !@track.mixed,
+  user_id: current_user.id,
+  strings: @rows || [],
+}, prerender: false)

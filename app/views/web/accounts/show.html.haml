@@ -6,8 +6,10 @@
           .sign-in_form
             %h1
               = t('.account')
-            -# = attachment_image_tag(@user, :avatar, :fill, 100, 100, fallback: "fallback_avatar.png", class: "image-circle")
-            = @user.first_name
-            = @user.last_name
-            = link_to edit_account_path, class: 'hype-icon-black' do
-              %i.fa.fa-pencil-square.fa-lg
+            = image_tag attachment_url(@user, :avatar, :fill, 200, 200, format: "jpg"), class: 'rounded-circle'
+            %br
+            %h3
+              = @user.first_name
+              = @user.last_name
+              = link_to edit_account_path, class: 'hype-icon-black' do
+                %i.fa.fa-pencil-square.fa-lg
