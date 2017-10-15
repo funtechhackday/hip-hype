@@ -10,4 +10,5 @@
   = image_tag('stick2.gif', size: "200x200")
   = image_tag attachment_url(@user2, :avatar, :fill, 50, 50, format: "jpg"), class: 'rounded-circle', style: 'position: absolute; margin-top: 30px; margin-left: 90px;'
 .row.justify-content-md-center
-  =audio_tag("final2.mp3", controls: true, autoplay: true)
+  -if @track.record.file.present?
+    =audio_tag(@track.record.file.url, controls: true, autoplay: true)

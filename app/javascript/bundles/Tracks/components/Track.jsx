@@ -94,7 +94,8 @@ export default class Track extends React.Component {
         {this.props.strings.map((el,key) => {
           return <div key={key}>{el}</div>
         })}
-        <AudioRecord
+        {this.props.available && <div>
+          <AudioRecord
             user={this.props.user_id}
             handlers={{
               updateQuestion: this.updateQuestion.bind(this)
@@ -115,6 +116,7 @@ export default class Track extends React.Component {
             <button onClick={this.sendData.bind(this)} type='submit' className='btn btn-primary'>Отправить</button>
           </div>
         </form>
+      </div>}
       </div>
     );
   }

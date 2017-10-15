@@ -1,5 +1,6 @@
 -# =render_
 = react_component("Track", props: { track_id: @track.id,
+  available: !@track.mixed,
   user_id: current_user.id,
-  strings: ["Йо йо привет всем как дела2", "Йо йо привет всем как дела2", "Йо йо привет всем как дела2", "Йо йо привет всем как дела2", ],
+  strings: @rows || [],
 }, prerender: false)

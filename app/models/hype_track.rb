@@ -1,6 +1,7 @@
 class HypeTrack < ApplicationRecord
   has_many :user_records
-  belongs_to :record
+  # has_many :users, throught: :user_records
+  belongs_to :record, optional: true
   belongs_to :audio_track
 
   def mix_track
