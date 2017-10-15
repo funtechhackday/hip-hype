@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171015103700) do
+ActiveRecord::Schema.define(version: 20171015113741) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,18 @@ ActiveRecord::Schema.define(version: 20171015103700) do
     t.index ["user_id"], name: "index_user_authorizations_on_user_id"
   end
 
+  create_table "user_records", force: :cascade do |t|
+    t.bigint "record_id"
+    t.bigint "hype_track_id"
+    t.string "track_string"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["hype_track_id"], name: "index_user_records_on_hype_track_id"
+    t.index ["record_id"], name: "index_user_records_on_record_id"
+    t.index ["user_id"], name: "index_user_records_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -57,4 +69,7 @@ ActiveRecord::Schema.define(version: 20171015103700) do
   end
 
   add_foreign_key "user_authorizations", "users"
+  add_foreign_key "user_records", "hype_tracks"
+  add_foreign_key "user_records", "records"
+  add_foreign_key "user_records", "users"
 end

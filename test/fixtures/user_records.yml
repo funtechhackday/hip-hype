@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  record: one
+  hype_track: one
+  track_string: MyString
+  user: one
+
+two:
+  record: two
+  hype_track: two
+  track_string: MyString
+  user: two
