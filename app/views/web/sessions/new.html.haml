@@ -14,10 +14,10 @@
           %br
           %h3
             = t('.sign_in_via_socials')
-          %ul.navbar-nav.d-inline-flex
-            %li.nav-item
-              = link_to sign_in_via_social_network_cpath(:vkontakte), class: 'nav-link' do
-                %span.fa.fa-vk
-            %li.nav-item
-              = link_to sign_in_via_social_network_cpath(:facebook), class: 'nav-link' do
-                %span.fa.fa-facebook
+          %ul.list-inline
+            %li.list-inline-item
+              = link_to sign_in_via_social_network_cpath(:vkontakte), class: 'nav-link hype-icon-black' do
+                %span.fa.fa-vk.fa-2x
+            %li.list-inline-item
+              = link_to sign_in_via_social_network_cpath(:facebook), class: 'nav-link hype-icon-black' do
+                %span.fa.fa-facebook.fa-2x

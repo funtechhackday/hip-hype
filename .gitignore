@@ -12,6 +12,7 @@
 /db/*.sqlite3-journal
 
 /config/*.yml
+/config/initializers/configus.rb
 
 # Ignore all logfiles and tempfiles.
 /log/*

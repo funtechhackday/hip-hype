@@ -11,5 +11,5 @@ Rails.application.routes.draw do
     root to: 'users#index'
     resources :users, only: [:index, :edit, :update]
   end
-
+  match '/auth/:provider/callback' => 'api/social_networks#auth_callback', via: [:get, :post]
 end
