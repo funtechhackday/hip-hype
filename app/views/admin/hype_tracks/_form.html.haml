@@ -1,0 +1,9 @@
+= simple_form_for([:admin, @admin_hype_track]) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :theme
+
+  .form-actions
+    = f.button :submit

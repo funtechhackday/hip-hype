@@ -1,0 +1,23 @@
+.row
+  .col-md-12
+    .form-actions
+    %table.table.table-striped
+      %thead
+        %tr
+          %th= HypeTrack.human_attribute_name(:id)
+          %th= HypeTrack.human_attribute_name(:name)
+          %th= HypeTrack.human_attribute_name(:theme)
+          %th= t('edit')
+
+      %tbody
+        - @admin_hype_tracks.each do |admin_hype_track|
+          %tr
+            %td= admin_hype_track.id
+            %td= admin_hype_track.name
+            %td= admin_hype_track.theme
+            %td
+              = link_to edit_admin_hype_track_path(admin_hype_track) do
+                %i.fa.fa-pencil
+
+
+= link_to 'Добавить трек', new_admin_hype_track_path
