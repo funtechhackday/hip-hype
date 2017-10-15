@@ -10,24 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20171015010002) do
-=======
-ActiveRecord::Schema.define(version: 20171014151534) do
->>>>>>> feature/records
+ActiveRecord::Schema.define(version: 20171015090235) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-  create_table "user_authorizations", force: :cascade do |t|
-    t.string "uid"
-    t.bigint "user_id"
-    t.string "provider"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_user_authorizations_on_user_id"
-=======
   create_table "hype_tracks", force: :cascade do |t|
     t.string "name"
     t.text "theme"
@@ -39,7 +26,15 @@ ActiveRecord::Schema.define(version: 20171014151534) do
     t.string "file_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
->>>>>>> feature/records
+  end
+
+  create_table "user_authorizations", force: :cascade do |t|
+    t.string "uid"
+    t.bigint "user_id"
+    t.string "provider"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_authorizations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,6 +42,10 @@ ActiveRecord::Schema.define(version: 20171014151534) do
     t.string "last_name"
     t.string "email"
     t.string "password_digest"
+    t.string "avatar_id"
+    t.string "avatar_filename"
+    t.string "avatar_content_type"
+    t.integer "avatar_size"
   end
 
   add_foreign_key "user_authorizations", "users"
