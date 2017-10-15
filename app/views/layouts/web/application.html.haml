@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+    = csrf_meta_tags
+    = stylesheet_link_tag "application", media: "all"#, 'data-turbolinks-track' => true
+    = javascript_include_tag 'application'#, 'data-turbolinks-track' => true
+    = javascript_pack_tag 'hello-world-bundle'
+
+  %body
+    = render 'web/shared/header'
+    .container-fluid.container-max-width
+      = bootstrap_flash_messages
+      = yield

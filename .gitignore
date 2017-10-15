@@ -12,6 +12,7 @@
 /db/*.sqlite3-journal
 
 /config/*.yml
+/config/initializers/configus.rb
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -23,3 +24,6 @@
 /yarn-error.log
 
 .byebug_history
+/public/packs
+/public/packs-test
+/node_modules

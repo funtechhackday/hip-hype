@@ -1,0 +1,24 @@
+%nav.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse
+  .navbar-brand
+    = link_to root_path, class: 'navbar-brand' do
+      = t('hip-hype')
+  .ml-auto
+    %ul.navbar-nav
+      - if signed_in?
+        %li.nav-item
+          = link_to account_path, class: 'nav-link' do
+            %i.fa.fa-user
+            %span= t('profile')
+        %li.nav-item
+          = link_to session_path, class: 'nav-link', method: :delete do
+            %i.fa.fa-sign-out
+            %span= t('sign_out')
+      - else
+        %li.nav-item
+          = link_to new_session_path, class: 'nav-link' do
+            %i.fa.fa-sign-out
+            %span= t('sign_in')
+        %li.nav-item
+          = link_to new_user_path, class: 'nav-link' do
+            %i.fa.fa-user-plus
+            %span= t('sign_up')

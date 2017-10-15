@@ -1,0 +1,27 @@
+.registration-form
+  .row.justify-content-md-center
+    .col-md-6
+      .card
+        .card-block
+          .sign-in_form
+            %h1
+              = t('.registration')
+            = simple_form_for @user, url: users_path(params.extract!(:from).permit!) do |f|
+              .row
+                .col-md-6
+                  = f.input :email
+                  = f.input :first_name
+                  = f.input :last_name
+                  = f.input :password
+                  = f.submit t('.submit'), class: "btn btn-secondary"
+
+    
+  -# %h3
+  -#   = t('.sign_in_via_socials')
+  -# %ul.socials
+  -#   %li.social
+  -#     = link_to sign_in_via_social_network_cpath(:vkontakte) do
+  -#       %span.fa.fa-vk
+  -#   %li.social
+  -#     = link_to sign_in_via_social_network_cpath(:facebook) do
+  -#       %span.fa.fa-facebook

@@ -1,0 +1,10 @@
+%p#notice= notice
+
+%p
+  = @admin_hype_track.name
+%p
+  = @admin_hype_track.theme
+
+= link_to 'Изменить', edit_admin_hype_track_path(@admin_hype_track)
+\|
+= link_to 'Назад', admin_hype_tracks_path

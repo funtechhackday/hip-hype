@@ -1,0 +1,35 @@
+ru:
+  admin:
+    users:
+      index:
+        title: Пользователи
+      edit:
+        edit: Редактировать пользователя
+    hype_tracks:
+      index:
+        title: Треки
+      edit:
+        edit: Редактировать трек
+
+  web:
+    sessions:
+      new:
+        sign_in: Авторизация
+        sign_in_via_socials: Войти с помощью социальных сетей
+        submit: Войти
+    users:
+      new:
+        registration: Регистрация
+        sign_in: Войти
+        submit: Зарегистрироваться
+    accounts:
+      edit:
+        change_info: Изменить информацию
+        submit: Подтвердить изменения
+      show:
+        account: Аккаунт
+
+  helpers:
+    submit:
+      user:
+        update: Обновить пользователя

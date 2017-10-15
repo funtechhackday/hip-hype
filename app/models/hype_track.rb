@@ -1,0 +1,2 @@
+class HypeTrack < ApplicationRecord
+end

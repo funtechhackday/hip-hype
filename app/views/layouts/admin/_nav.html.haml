@@ -1,0 +1,7 @@
+%nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+  .navbar-brand
+    = t('hip-hype')
+  #navbarNav
+    %ul.navbar-nav
+      = nav_link(t('users'), admin_users_path, 'nav-link', 'nav-item')
+      = nav_link(t('hype_tracks'), admin_hype_tracks_path, 'nav-link', 'nav-item')
